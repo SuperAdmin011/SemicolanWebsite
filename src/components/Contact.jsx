@@ -3,7 +3,10 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 function Contact() {
     return (
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-6">
+            <h2 className="text-4xl text-orange-500  text-center my-8">
+                Contact Us
+            </h2>
             <div className="grid gap-8 lg:grid-cols-2">
                 {/* Contact Information */}
                 <div className="space-y-6">
