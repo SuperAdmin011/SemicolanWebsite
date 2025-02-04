@@ -27,7 +27,7 @@ const Home = () => {
                                 We provide comprehensive IT solutions, services,
                                 and products to meet your business needs.
                             </p>
-                            <button className="rounded-full px-7 py-2 bg-black text-white">
+                            <button className="rounded-full px-7 py-2 bg-zinc-600 text-white">
                                 Register
                             </button>
                         </div>
