@@ -6,8 +6,8 @@ const Home = () => {
     return (
         <div className="bg-white">
             <div className="py-2 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen">
-                <Carousel className="w-full mx-auto">
-                    <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
+                <Carousel className="container mx-auto px-4 py-6">
+                    <div className="my-28 md:my-8 py-8 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
                         <div>
                             <img
                                 className="w-full h-auto object-cover"

@@ -28,8 +28,8 @@ function Services() {
         },
     ];
     return (
-        <div className="md:px-14 px-4 py-16 max-w-screen-2xl max-auto">
-            <div className="text-center my-8">
+        <div className="md:px-14 px-4 py-16  max-auto">
+            <div className="text-center my-8 container mx-auto px-4 py-6">
                 <h2 className="text-4xl text-orange-600 mb-2">Our Clients</h2>
                 <p className="text-grey-600">
                     We have been working with 150+ clients
