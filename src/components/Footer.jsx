@@ -131,18 +131,27 @@ function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <div className="mt-8 pt-3 border-t text-center text-sm text-muted-foreground bg-zinc-500 text-white justify-center">
-                    <p>
-                        © Copyright{" "}
-                        <span className="font-semibold">Ninestars</span>. All
-                        Rights Reserved
-                    </p>
-                    <p>
-                        Designed by{" "}
-                        <a href="#" className="text-primary hover:underline">
-                            Frontman(Pvt)Ltd
-                        </a>
-                    </p>
+                <div className="mt-6 border-t bg-zinc-600 text-white">
+                    <div className="container mx-auto px-4 py-4 flex items-center justify-center h-14">
+                        <div className="text-center text-sm">
+                            <p>
+                                © Copyright{" "}
+                                <span className="font-semibold text-orange-500">
+                                    Semicolans
+                                </span>
+                                . All Rights Reserved
+                            </p>
+                            <p>
+                                Designed by{" "}
+                                <a
+                                    href="#"
+                                    className="text-primary hover:underline"
+                                >
+                                    Frontman(Pvt)Ltd
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>

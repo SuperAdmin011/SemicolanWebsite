@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Services() {
     const products = [
@@ -27,6 +28,25 @@ function Services() {
             site: "https://semigro.com/",
         },
     ];
+
+    const logos = [
+        "/src/assets/company/c2.png",
+        "/src/assets/company/c3.png",
+        "/src/assets/company/c4.png",
+        "/src/assets/company/c5.png",
+        "/src/assets/company/c6.png",
+        "/src/assets/company/c7.png",
+        "/src/assets/company/c8.png",
+        "/src/assets/company/c2.png",
+        "/src/assets/company/c3.png",
+        "/src/assets/company/c4.png",
+        "/src/assets/company/c5.png",
+        "/src/assets/company/c8.png",
+        "/src/assets/company/c2.png",
+        "/src/assets/company/c3.png",
+        "/src/assets/company/c8.png",
+    ];
+
     return (
         <div className="md:px-14 px-4 py-16  max-auto">
             <div className="text-center my-8 container mx-auto px-4 py-6">
@@ -36,14 +56,25 @@ function Services() {
                 </p>
 
                 {/* clients logos */}
-                <div className="my-12 flex flex-wrap justify-between item-center gap-8">
-                    <img src="/src/assets/company/c2.png" alt="" />
-                    <img src="/src/assets/company/c3.png" alt="" />
-                    <img src="/src/assets/company/c4.png" alt="" />
-                    <img src="/src/assets/company/c5.png" alt="" />
-                    <img src="/src/assets/company/c6.png" alt="" />
-                    <img src="/src/assets/company/c7.png" alt="" />
-                    <img src="/src/assets/company/c8.png" alt="" />
+
+                <div className="my-12 flex flex-wrap justify-center gap-x-8 gap-y-3 w-full  mx-auto ">
+                    {logos.map((logo, index) => (
+                        <motion.img
+                            key={index}
+                            src={logo}
+                            alt={`Company Logo ${index + 1}`}
+                            className="h-16"
+                            animate={{
+                                y: [0, -10, 0, 10, 0], // Moves up and down smoothly
+                            }}
+                            transition={{
+                                duration: 3, // Adjust wave speed
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                                delay: index * 0.3, // Stagger effect for wave motion
+                            }}
+                        />
+                    ))}
                 </div>
 
                 {/* company services */}
