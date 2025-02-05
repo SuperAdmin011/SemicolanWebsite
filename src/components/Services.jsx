@@ -41,12 +41,9 @@ function Services() {
         "/src/assets/company/c3.png",
         "/src/assets/company/c4.png",
         "/src/assets/company/c5.png",
-        "/src/assets/company/c6.png",
-        "/src/assets/company/c7.png",
         "/src/assets/company/c8.png",
-        "/src/assets/company/c5.png",
-        "/src/assets/company/c6.png",
-        "/src/assets/company/c7.png",
+        "/src/assets/company/c2.png",
+        "/src/assets/company/c3.png",
         "/src/assets/company/c8.png",
     ];
 
@@ -60,27 +57,24 @@ function Services() {
 
                 {/* clients logos */}
 
-                <div className="my-12 flex flex-wrap justify-between item-center gap-8">
-                    <motion.div
-                        className="flex items-center gap-8"
-                        initial={{ x: "100%" }} // Start from the right
-                        animate={{ x: "-100%" }} // Move left
-                        transition={{
-                            repeat: Infinity, // Infinite loop
-                            repeatType: "loop", // Loop resets after each full cycle
-                            duration: 20, // Adjust speed
-                            ease: "linear",
-                        }}
-                    >
-                        {logos.map((logo, index) => (
-                            <img
-                                key={index}
-                                src={logo}
-                                alt={`Company Logo ${index + 1}`}
-                                className="h-16"
-                            />
-                        ))}
-                    </motion.div>
+                <div className="my-12 flex flex-wrap justify-center gap-x-8 gap-y-3 w-full  mx-auto ">
+                    {logos.map((logo, index) => (
+                        <motion.img
+                            key={index}
+                            src={logo}
+                            alt={`Company Logo ${index + 1}`}
+                            className="h-16"
+                            animate={{
+                                y: [0, -10, 0, 10, 0], // Moves up and down smoothly
+                            }}
+                            transition={{
+                                duration: 3, // Adjust wave speed
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                                delay: index * 0.3, // Stagger effect for wave motion
+                            }}
+                        />
+                    ))}
                 </div>
 
                 {/* company services */}
