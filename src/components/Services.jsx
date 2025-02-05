@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Services() {
     const products = [
@@ -27,6 +28,28 @@ function Services() {
             site: "https://semigro.com/",
         },
     ];
+
+    const logos = [
+        "/src/assets/company/c2.png",
+        "/src/assets/company/c3.png",
+        "/src/assets/company/c4.png",
+        "/src/assets/company/c5.png",
+        "/src/assets/company/c6.png",
+        "/src/assets/company/c7.png",
+        "/src/assets/company/c8.png",
+        "/src/assets/company/c2.png",
+        "/src/assets/company/c3.png",
+        "/src/assets/company/c4.png",
+        "/src/assets/company/c5.png",
+        "/src/assets/company/c6.png",
+        "/src/assets/company/c7.png",
+        "/src/assets/company/c8.png",
+        "/src/assets/company/c5.png",
+        "/src/assets/company/c6.png",
+        "/src/assets/company/c7.png",
+        "/src/assets/company/c8.png",
+    ];
+
     return (
         <div className="md:px-14 px-4 py-16  max-auto">
             <div className="text-center my-8 container mx-auto px-4 py-6">
@@ -36,14 +59,28 @@ function Services() {
                 </p>
 
                 {/* clients logos */}
+
                 <div className="my-12 flex flex-wrap justify-between item-center gap-8">
-                    <img src="/src/assets/company/c2.png" alt="" />
-                    <img src="/src/assets/company/c3.png" alt="" />
-                    <img src="/src/assets/company/c4.png" alt="" />
-                    <img src="/src/assets/company/c5.png" alt="" />
-                    <img src="/src/assets/company/c6.png" alt="" />
-                    <img src="/src/assets/company/c7.png" alt="" />
-                    <img src="/src/assets/company/c8.png" alt="" />
+                    <motion.div
+                        className="flex items-center gap-8"
+                        initial={{ x: "100%" }} // Start from the right
+                        animate={{ x: "-100%" }} // Move left
+                        transition={{
+                            repeat: Infinity, // Infinite loop
+                            repeatType: "loop", // Loop resets after each full cycle
+                            duration: 20, // Adjust speed
+                            ease: "linear",
+                        }}
+                    >
+                        {logos.map((logo, index) => (
+                            <img
+                                key={index}
+                                src={logo}
+                                alt={`Company Logo ${index + 1}`}
+                                className="h-16"
+                            />
+                        ))}
+                    </motion.div>
                 </div>
 
                 {/* company services */}
