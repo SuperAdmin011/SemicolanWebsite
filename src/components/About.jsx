@@ -35,37 +35,6 @@ const people = [
 ];
 
 export default function About() {
-    const controls = people.map(() => useAnimation());
-
-    useEffect(() => {
-        const animateCards = async () => {
-            // Initial rotation of all cards together
-            await Promise.all(
-                controls.map((control) =>
-                    control.start({ rotateY: 360, transition: { duration: 1 } })
-                )
-            );
-
-            // Wait for 5 seconds after initial rotation
-            await new Promise((resolve) => setTimeout(resolve, 5000));
-
-            // Individual card rotations
-            for (let i = 0; i < people.length; i++) {
-                await controls[i].start({
-                    rotateY: 720,
-                    transition: { duration: 2, ease: "easeInOut" },
-                });
-
-                // Wait for 5 seconds before the next card (if not the last card)
-                if (i < people.length - 1) {
-                    await new Promise((resolve) => setTimeout(resolve, 3000));
-                }
-            }
-        };
-
-        animateCards();
-    }, [controls]); // Added controls to the dependency array
-
     return (
         <div className="container mx-auto px-4 py-6">
             <h2 className="text-4xl text-orange-500 text-center my-8">
@@ -76,7 +45,16 @@ export default function About() {
                     <motion.div
                         key={person.id}
                         className="w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
-                        animate={controls[index]}
+                        animate={{
+                            rotateY: [0, 180, 360], // Y-axis rotation
+                        }}
+                        transition={{
+                            duration: 2, // Duration for full rotation
+                            ease: "easeInOut", // Smooth movement
+                            repeat: Infinity, // Infinite loop
+                            delay: index * 3, // Delay each card's rotation
+                            repeatDelay: (people.length - 1) * 3, // Wait for all cards before restarting
+                        }}
                     >
                         <div className="flex flex-col items-center py-6 px-4">
                             <img
