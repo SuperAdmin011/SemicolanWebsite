@@ -62,28 +62,22 @@ function Footer() {
                         </h2>
                         <nav className="space-y-2">
                             <a
-                                href="/services/web-design"
+                                href="#"
                                 className="block text-muted-foreground hover:text-primary"
                             >
-                                Web Design
+                                Semi Erp
                             </a>
                             <a
                                 href="/services/web-development"
                                 className="block text-muted-foreground hover:text-primary"
                             >
-                                Web Development
-                            </a>
-                            <a
-                                href="/services/product-management"
-                                className="block text-muted-foreground hover:text-primary"
-                            >
-                                Product Management
+                                Semi Co
                             </a>
                             <a
                                 href="/services/marketing"
                                 className="block text-muted-foreground hover:text-primary"
                             >
-                                Marketing
+                                Semi Gro
                             </a>
                         </nav>
                     </div>

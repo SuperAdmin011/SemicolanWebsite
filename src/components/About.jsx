@@ -36,7 +36,7 @@ const people = [
 
 export default function About() {
     return (
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-6" id="/aboutus">
             <h2 className="text-4xl text-orange-500 text-center my-8">
                 About Us
             </h2>
@@ -73,7 +73,7 @@ export default function About() {
                             </span>
                             <div className="flex mt-4 space-x-3">
                                 <a
-                                    href="#"
+                                    href="/contact"
                                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-zinc-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 >
                                     Connect

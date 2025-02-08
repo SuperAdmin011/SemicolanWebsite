@@ -29,11 +29,10 @@ function Navbar() {
 
     // Nav items array
     const navItems = [
-        { name: "Home", path: "home" },
-        { name: "Service", path: "service" },
-        { name: "About Us", path: "aboutus" },
-        { name: "Products", path: "products" },
-        { name: "Reviews", path: "reviews" },
+        { name: "Home", path: "/home" },
+        { name: "About Us", path: "/aboutus" },
+        { name: "Products", path: "/products" },
+        { name: "Reviews", path: "/reviews" },
     ];
 
     return (
@@ -77,7 +76,15 @@ function Navbar() {
 
                     {/* btn for large devices */}
                     <div className="hidden lg:flex items-center space-x-12">
-                        <button className="bg-orange-600 text-white py-2 px-6 transition-all duration-300 rounded-full hover:bg-gray-700">
+                        <button
+                            className="bg-orange-600 text-white py-2 px-6 transition-all duration-300 rounded-full hover:bg-gray-700"
+                            onClick={() => {
+                                // Using react-scroll's scroll to 'contactus' section
+                                document
+                                    .getElementById("/contactus")
+                                    ?.scrollIntoView({ behavior: "smooth" });
+                            }}
+                        >
                             Contact Us
                         </button>
                     </div>
@@ -119,7 +126,17 @@ function Navbar() {
                             </li>
                         ))}
                         <li>
-                            <button className="w-full bg-amber-800 text-white py-2 px-6 transition-all duration-300 rounded-full hover:bg-gray-700">
+                            <button
+                                className="w-full bg-amber-800 text-white py-2 px-6 transition-all duration-300 rounded-full hover:bg-gray-700"
+                                onClick={() => {
+                                    // Using react-scroll's scroll to 'contactus' section
+                                    document
+                                        .getElementById("/contactus")
+                                        ?.scrollIntoView({
+                                            behavior: "smooth",
+                                        });
+                                }}
+                            >
                                 Contact Us
                             </button>
                         </li>

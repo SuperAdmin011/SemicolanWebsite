@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 function Contact() {
     return (
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-6" id="/contactus">
             <h2 className="text-4xl text-orange-500  text-center my-8">
                 Contact Us
             </h2>
